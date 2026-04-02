@@ -14,11 +14,16 @@
             color: white;
         }
 
-        /* Ajuste para as imagens do carousel (com ajuda do chatgpt) */
-        .carousel-item img {  
+        /* padronização de imagens (com ajuda do chatgpt) */
+        .carousel-item img {
             height: 410px;
             object-fit: cover;
             object-position: center;
+        }
+
+        .card-img-top {
+            height: 450px;
+            object-fit: cover;
         }
 
         /* AJUSTE PARA CELULARES */
@@ -146,24 +151,174 @@
     </div>
 
     <!-- cards -->
-    
-    <div class="col-12 col-md-6 col-lg-3">
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- card 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card m-3 h-100 shadow">
                     <img src="img/Film1.jpg" class="card-img-top" alt="Poster">
                     <div class="card-body text-center">
                         <h5 class="card-title text-warning">Frankenstein (2025)</h5>
                         <span class="badge rounded-pill bg-info mb-2 text-dark">fic-cie</span>
-                        <p class="card-text text-secondary italic">"Releitura sombria e emocional <br> ganhador de 3 oscars."</p>
-                        <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#movieModal">
+                        <p class="card-text text-secondary italic">"Um cientista brilhante, traz uma criatura monstruosa
+                            à vida em um experimento ousado que, leva à ruína tanto do criador quanto de sua trágica
+                            criação.
+                        </p>
+                        <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#cineCotil">
                             <i class="bi bi-info-circle"></i> Ver Detalhes
                         </button>
                     </div>
                 </div>
             </div>
+            <!-- card 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card m-3 h-100 shadow">
+                    <img src="img/film2.png" class="card-img-top" alt="Poster">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-warning">Ainda estou aqui (2024)</h5>
+                        <span class="badge rounded-pill bg-info mb-2 text-dark">Drama</span>
+                        <p class="card-text text-secondary italic">
+                            Aborda memória, a dor da perda, a resistência feminina e o impacto profundo da ditadura na
+                            estrutura familiar.
+                        </p>
+                        <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#cineCotil">
+                            <i class="bi bi-info-circle"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card m-3 h-100 shadow">
+                    <img src="img/film3.jpg" class="card-img-top" alt="Poster">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-warning">Fragmentado (2016)</h5>
+                        <span class="badge rounded-pill bg-info mb-2 text-dark">Terror</span>
+                        <p class="card-text text-secondary italic">
+                            Kevin possui 23 personalidades distintas e consegue alterná-las quimicamente em seu
+                            organismo apenas com a força do pensamento.
+                        </p>
+                        <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#cineCotil">
+                            <i class="bi bi-info-circle"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- card 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card m-3 h-100 shadow">
+                    <img src="img/film4.jpg" class="card-img-top" alt="Poster">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-warning">O Show de Truman (1998)</h5>
+                        <span class="badge rounded-pill bg-info mb-2 text-dark">fic-cie</span>
+                        <p class="card-text text-secondary italic">
+                            O produtor executivo Christof organiza um reality show baseado na vida de um homem comum,
+                            Truman Burbank.
+                        </p>
+                        <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#cineCotil">
+                            <i class="bi bi-info-circle"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- forms -->
+            <div class="col-md-6 mb-4">
+                <h3 class="text-warning mb-3"><i class="bi bi-pencil-square"></i> Deixe sua Crítica</h3>
+                <form class="needs-validation p-4 bg-dark rounded border border-secondary" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label">Seu Nome</label>
+                        <input type="text" class="form-control" required>
+                        <div class="invalid-feedback">O nome é obrigatório.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Filme/Série</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Nota (0 a 10) <i class="bi bi-star-fill text-warning"></i>
+                        </label>
+                        <input type="number" class="form-control" min="0" max="10" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sua Opinião</label>
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button class="btn btn-warning w-100 fw-bold" type="submit">Enviar Avaliação</button>
+                </form>
+            </div>
+
+            <!-- acorddion -->
+            <div class="col-md-6">
+                <h3 class="text-warning mb-3">
+                    <i class="bi bi-question-circle"></i> Perguntas Frequentes
+                </h3>
+                <div class="accordion accordion-flush" id="pergFreq">
+                    <div class="accordion-item bg-transparent text-white border-secondary">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#f1">
+                                Como funciona as notas do Cine-Cotil?
+                            </button>
+                        </h2>
+                        <div id="f1" class="accordion-collapse collapse" data-bs-parent="#pergFreq">
+                            <div class="accordion-body text-secondary">
+                                Fazemos uma média entre as críticas especializadas e a nota dos usuários do Cine-Cotil.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent text-white border-secondary">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#f2">
+                                Posso sugerir um filme?
+                            </button>
+                        </h2>
+                        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#pergFreq">
+                            <div class="accordion-body text-secondary">
+                                Sim! temos umformulário de contato para enviar sugestões de novos filmes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
